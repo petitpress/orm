@@ -528,7 +528,7 @@ class Parser
      */
     private function isMathOperator($token)
     {
-        return in_array($token['type'], array(Lexer::T_PLUS, Lexer::T_MINUS, Lexer::T_DIVIDE, Lexer::T_MULTIPLY));
+        return $token !== null && in_array($token['type'], array(Lexer::T_PLUS, Lexer::T_MINUS, Lexer::T_DIVIDE, Lexer::T_MULTIPLY));
     }
 
     /**
